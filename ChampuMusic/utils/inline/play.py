@@ -67,53 +67,15 @@ def stream_markup_timerr(_, videoid, chat_id, played, dur):
         bar = "✨ ᴛᴀᴘ ʜᴇʀᴇ ᴛᴏ ɢʀᴏᴜᴘ ɪɴᴠɪᴛᴇs ✨"
     buttons = [
         [
-            InlineKeyboardButton(
-                text=f"{bar}",
-                url=f"https://t.me/{app.username}?startgroup=true",
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="ᴘʟᴀʏʟɪsᴛ", callback_data=f"champu_playlist {videoid}"
-            ),
-            InlineKeyboardButton(
-                text="ᴄᴏɴᴛʀᴏʟs",
-                callback_data=f"Pages Back|3|{videoid}|{chat_id}",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="ᴠɪᴅᴇᴏ", callback_data=f"downloadvideo {videoid}"
-            ),
-            InlineKeyboardButton(
-                text="ᴀᴜᴅɪᴏ", callback_data=f"downloadaudio {videoid}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="๏ ᴀʟʟ ғᴇᴀᴛᴜʀᴇs ๏",
-                callback_data=f"Pages Forw|0|{videoid}|{chat_id}",
-            ),
-        ],
+            InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close")],
     ]
-
     return buttons
 
 
 def stream_markupp(_, videoid, chat_id):
     buttons = [
         [
-            InlineKeyboardButton(
-                text=_["P_B_7"], callback_data=f"add_playlist {videoid}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
-        ],
-        [InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close")],
+            InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close")],
     ]
     return buttons
 
@@ -146,36 +108,8 @@ def telegram_markup_timer(_, chat_id, played, dur, videoid):
 
     buttons = [
         [
-            InlineKeyboardButton(
-                text=f"{played} •{bar}• {dur}",
-                url=f"https://t.me/{app.username}?startgroup=true",
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="ᴘʟᴀʏʟɪsᴛ", callback_data=f"champu_playlist {videoid}"
-            ),
-            InlineKeyboardButton(
-                text="ᴄᴏɴᴛʀᴏʟs",
-                callback_data=f"Pages Back|3|{videoid}|{chat_id}",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="ᴠɪᴅᴇᴏ", callback_data=f"downloadvideo {videoid}"
-            ),
-            InlineKeyboardButton(
-                text="ᴀᴜᴅɪᴏ", callback_data=f"downloadaudio {videoid}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="๏ ᴀʟʟ ғᴇᴀᴛᴜʀᴇs ๏",
-                callback_data=f"Pages Forw|0|{videoid}|{chat_id}",
-            ),
-        ],
+            InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close")],
     ]
-
     return buttons
 
 
